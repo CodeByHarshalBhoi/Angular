@@ -1,0 +1,44 @@
+
+<app-search></app-search>
+
+<h1>string interpolation</h1>
+<p>Name: {{Name}}</p>
+<p>Color: {{Color}}</p>
+<p>Price: {{Price}}</p>
+
+
+<p>-------------------------</p>
+<!-- IMAGE WITH INTERPOLATION -->
+<!-- <img src="{{product.pImage}}" alt="Iphone Image"> -->
+
+<!-- IMAGE WITH PROPERTY BINDINGG -->
+
+<div class="ekart-producr-container">
+
+
+<img [src]="product.pImage" alt="">
+
+<p>Name: {{product.Name}}</p>
+<p>Color: {{product.Color}}</p>
+<p>Price: {{product.Price}}</p>
+<p>Discount: {{product.Price * product.Discount/100}}</p>
+<p>Discount price: {{product.Price-(product.Price * product.Discount / 100)}}</p>
+<p>Discount Price by method: {{getDiscount().toFixed(2)}}</p>
+<p>{{product.Stock >0? 'only' + product.Stock + ' items left' : 'Not in stock'}}</p>
+
+<button (click)="decrementCartValue()">-</button>
+<span>{{product.addToCart}}</span>
+<button (click)="incrementCartValue()">+</button>
+
+
+<br>
+<!-- USER PROPERTY BINDING INSTEAD OF INTERPOLATION -->
+<button [disabled]="!(product.Stock > 0 )">Buy now</button>
+<br>
+<input type="text" [value]="PhoneType" (input)="getValue($event)">
+<p>Model: {{PhoneType}}</p>
+
+
+
+</div>
+

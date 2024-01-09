@@ -1,0 +1,22 @@
+<p>productuct works!</p>
+
+
+
+<div class="row row-3 row-md-3 g-3" style="width: 18rem;" >
+
+  <img [src]="product.imageURL" class="card-img-top" alt="Shoes image">
+  <div><span class="badge text-bg-primary" *ngIf="product.discount">{{(100-(product.discount / product.price *100)).toFixed(2)}} % </span>
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{product.gender}}</li>
+      <li class="list-group-item">{{product.category}}</li>
+      <li class="list-group-item">{{product.brand}}</li>
+    </ul>
+  <div class="card-body">
+    <p> {{product.color.length}}</p>
+    <span [ngStyle]="{fontweight:'bold', color:product.is_in_invemtory?'Green':'Red'}">{{ product.is_in_invemtory?'available in stack': 'unavailable in stack' }}</span>
+  </div>
+</div>

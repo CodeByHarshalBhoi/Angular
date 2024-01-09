@@ -1,0 +1,14 @@
+<!-- <div class="ekart-search-product">
+  <input class="ekart-search-product-input" [value]="searchProduct" (input)="getInputData($event)" [(ngModel)]="searchProduct">
+  <button [ngClass]="{'btn':true, 'btn-search':searchProduct ,'btn-search-disabled':!searchProduct}" [disabled]="!searchProduct">Search</button>
+</div> -->
+
+<div class="container my-3  ">
+  <!-- <label for="exampleDataList" class="form-label">Datalist example</label> -->
+  <input [value]="searchProduct" (input)="getInputData($event)" [(ngModel)]="searchProduct" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+  <button class="btn my-3" [ngClass]="{'btn':true, 'btn-search':searchProduct ,'btn-search-disabled':!searchProduct}" [disabled]="!searchProduct">Search</button>
+  </div>
+
+<div class="ekart-search-result-for">
+  <p *ngIf="searchProduct != ''"><strong>search result for:</strong> {{searchProduct}}</p>
+</div>

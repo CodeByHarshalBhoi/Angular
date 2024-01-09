@@ -1,0 +1,30 @@
+<p>ngFor use</p>
+<div *ngFor="let point of points">
+  <li>{{point}}</li>
+</div>
+
+<!-- <div class="row row-3 row-md-3 g-3" style="width: 18rem;" *ngFor="let prod of products">
+
+      <img [src]="prod.imageURL" class="card-img-top" alt="Shoes image">
+      <div><span class="badge text-bg-primary" *ngIf="prod.discount">{{(100-(prod.discount / prod.price *100)).toFixed(2)}} % </span>
+        <div class="card-body">
+          <h5 class="card-title">{{prod.name}}</h5>
+          <p class="card-text">{{prod.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{prod.gender}}</li>
+          <li class="list-group-item">{{prod.category}}</li>
+          <li class="list-group-item">{{prod.brand}}</li>
+        </ul>
+      <div class="card-body">
+        <p> {{prod.color.length}}</p>
+        <span [ngStyle]="{fontweight:'bold', color:prod.is_in_invemtory?'Green':'Red'}">{{ prod.is_in_invemtory?'available in stack': 'unavailable in stack' }}</span>
+      </div>
+</div> -->
+
+<app-filter [all]="totalProductCount" [inStack]="totalProductInstack" [outOfStack]="totalProductOutOfStack"></app-filter>
+
+<div >
+ <app-product  *ngFor="let prod of products" [product]="prod"></app-product>
+</div>
+

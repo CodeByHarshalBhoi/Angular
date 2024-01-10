@@ -5,7 +5,12 @@
 
 <div class="container my-3  ">
   <!-- <label for="exampleDataList" class="form-label">Datalist example</label> -->
-  <input [value]="searchProduct" (input)="getInputData($event)" [(ngModel)]="searchProduct" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+  <input [value]="searchProduct" (input)="getInputData($event)" (input)="onSearchTextChanges()"
+          [(ngModel)]="searchProduct"
+          class="form-control"
+          list="datalistOptions"
+          id="exampleDataList"
+          placeholder="Type to search...">
   <button class="btn my-3" [ngClass]="{'btn':true, 'btn-search':searchProduct ,'btn-search-disabled':!searchProduct}" [disabled]="!searchProduct">Search</button>
   </div>
 

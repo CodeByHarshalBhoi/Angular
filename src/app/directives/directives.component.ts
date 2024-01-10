@@ -232,7 +232,17 @@ export class DirectivesComponent {
         slug:'nike-react-45'
       },
     ];
+
     totalProductCount = this.products.length;
     totalProductInstack = this.products.filter(p=> p.is_in_invemtory === true).length;
-    totalProductOutOfStack = this.products.filter(p=> p.is_in_invemtory !== true).length
+    totalProductOutOfStack = this.products.filter(p=> p.is_in_invemtory !== true).length;
+
+    selectedFilterRadioButton :string = 'all';
+
+      onFilterChange(value:any){
+        debugger
+      this.selectedFilterRadioButton = value;
+      console.log(value);
+    }
+    searchProduct:string ='';
 }

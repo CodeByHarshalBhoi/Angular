@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from '../Models/Product';
 
 @Component({
   selector: 'app-directives',
@@ -6,9 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent {
+productListComponent: any;
     constructor(){}
 
     points=[12,85,12,59,63,4,63,54];
+    selectedProduct:Product;
     products=[
       {
         id:1,
@@ -240,9 +243,8 @@ export class DirectivesComponent {
     selectedFilterRadioButton :string = 'all';
 
       onFilterChange(value:any){
-        debugger
+      console.log("selected radio button changed");
       this.selectedFilterRadioButton = value;
-      console.log(value);
     }
     searchProduct:string ='';
 }

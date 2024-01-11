@@ -11,6 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DirectivesComponent } from './directives/directives.component';
 import { ProductComponent } from './directives/product/product.component';
 import { FilterComponent } from './directives/filter/filter.component';
+import { ProductDetailComponent } from './directives/product-detail/product-detail.component';
+import { ProductDetail1Component } from './directives/product-detail1/product-detail1.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FilterComponent } from './directives/filter/filter.component';
     DirectivesComponent,
     ProductComponent,
     FilterComponent,
-  
+    ProductDetailComponent,
+    ProductDetail1Component,
+
   ],
   imports: [
     BrowserModule,

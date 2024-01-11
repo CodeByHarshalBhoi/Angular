@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-interpolation',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class InterpolationComponent {
   constructor(){}
+  @Input() searchProduct:string ='';
+
+
           Name:string = 'Iphone';
           Color:string='Black';
           Price:number= 19999
@@ -39,5 +42,9 @@ export class InterpolationComponent {
               this.product.addToCart --
             }
 
+          }
+
+          setSearchText(value:string){
+              this.searchProduct = value
           }
 }

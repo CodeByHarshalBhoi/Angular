@@ -10,8 +10,10 @@
           class="form-control"
           list="datalistOptions"
           id="exampleDataList"
-          placeholder="Type to search...">
-  <button class="btn my-3" [ngClass]="{'btn':true, 'btn-search':searchProduct ,'btn-search-disabled':!searchProduct}" [disabled]="!searchProduct">Search</button>
+          placeholder="Type to search..."
+          #searchInputText>
+  <!-- <button class="btn my-3" [ngClass]="{'btn':true, 'btn-search':searchProduct ,'btn-search-disabled':!searchProduct}" [disabled]="!searchProduct">Search</button> -->
+  <button class="btn btn-search my-3" (click)="setSearchText(searchInputText)">Search</button>
   </div>
 
 <div class="ekart-search-result-for">
